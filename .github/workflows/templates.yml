@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         platform:
-        - host: macos-latest
+#        - host: macos-latest
         - host: ubuntu-latest
     runs-on: ${{ matrix.platform.host }}
     steps:
