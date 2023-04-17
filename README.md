@@ -16,7 +16,7 @@ See `examples` directory
 
 To nixify a Rust project:
 ```
-nix flake init --template 'github:rvolosatovs/nixify#rust'
+nix flake init --template 'github:haraldh/nixify#rust'
 ```
 
 ### Example
@@ -24,7 +24,7 @@ nix flake init --template 'github:rvolosatovs/nixify#rust'
 A flake definition at `examples/rust-hello/flake.nix`:
 ```nix
 {
-  inputs.nixify.url = github:rvolosatovs/nixify;
+  inputs.nixify.url = github:haraldh/nixify;
 
   description = "Rust hello world";
 
@@ -41,7 +41,7 @@ A flake definition at `examples/rust-hello/flake.nix`:
 }
 ```
 
-Produces the following outputs (`nix flake show 'github:rvolosatovs/nixify?dir=examples/rust-hello'`):
+Produces the following outputs (`nix flake show 'github:haraldh/nixify?dir=examples/rust-hello'`):
 ```
 ├───checks
 │   ├───aarch64-darwin

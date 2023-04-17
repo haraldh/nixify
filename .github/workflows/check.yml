@@ -26,6 +26,6 @@ jobs:
           access-tokens = github.com=${{ github.token }}
     - uses: cachix/cachix-action@v12
       with:
-        name: rvolosatovs
+        name: haraldh
         authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
     - run: nix flake check -L --show-trace
