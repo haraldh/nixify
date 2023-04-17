@@ -8,6 +8,8 @@ on:
 jobs:
   nix-update:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - uses: actions/checkout@v3
       - uses: nixbuild/nix-quick-install-action@v22
@@ -24,5 +26,5 @@ jobs:
           title: "build(nix): update flake lock"
           body: ${{ steps.nix-update.outputs.pull-request-body }}
           labels: dependencies, nix
-          assignees: rvolosatovs
+          assignees: haraldh
           signoff: true
